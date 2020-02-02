@@ -21,6 +21,7 @@ test('The component MyApp can be imported and can render', () => {
     // Create a new component in component.js called MyApp
     // Export that component in component.js
 
+
     render(<MyApp />);
 });
 
@@ -34,7 +35,7 @@ test('The component MyApp renders "My First React App" as text', () => {
     expect(element).toBeDefined();
 });
 
-test('The App component renders a component called NewsArticle', () => {
+test("NewsArticle", () => {
     // You can nest components in components
     // https://reactjs.org/docs/components-and-props.html#composing-components
 
