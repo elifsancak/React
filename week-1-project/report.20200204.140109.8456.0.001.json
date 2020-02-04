@@ -4,14 +4,14 @@
     "reportVersion": 1,
     "event": "Allocation failed - JavaScript heap out of memory",
     "trigger": "FatalError",
-    "filename": "report.20200202.153014.13636.0.001.json",
-    "dumpEventTime": "2020-02-02T15:30:14Z",
-    "dumpEventTimeStamp": "1580653814600",
-    "processId": 13636,
+    "filename": "report.20200204.140109.8456.0.001.json",
+    "dumpEventTime": "2020-02-04T14:01:09Z",
+    "dumpEventTimeStamp": "1580821269256",
+    "processId": 8456,
     "cwd": "/home/hyfbe27/Desktop/Documents/React/week-1-project",
     "commandLine": [
-      "/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node",
-      "/home/hyfbe27/Desktop/Documents/React/week-1-project/node_modules/jest-worker/build/workers/processChild.js"
+      "node",
+      "/home/hyfbe27/Desktop/Documents/React/week-1-project/node_modules/react-scripts/scripts/test.js"
     ],
     "nodejsVersion": "v13.3.0",
     "glibcVersionRuntime": "2.27",
@@ -48,38 +48,38 @@
     "cpus": [
       {
         "model": "Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz",
-        "speed": 3292,
-        "user": 14301400,
-        "nice": 5181200,
-        "sys": 4289000,
-        "idle": 105641000,
+        "speed": 3392,
+        "user": 4053300,
+        "nice": 13700,
+        "sys": 1303800,
+        "idle": 57113500,
         "irq": 0
       },
       {
         "model": "Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz",
-        "speed": 3301,
-        "user": 12938400,
-        "nice": 6477100,
-        "sys": 3729700,
-        "idle": 106734200,
+        "speed": 3392,
+        "user": 3992400,
+        "nice": 77400,
+        "sys": 1194600,
+        "idle": 57436900,
         "irq": 0
       },
       {
         "model": "Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz",
-        "speed": 3297,
-        "user": 14615200,
-        "nice": 5024700,
-        "sys": 4462400,
-        "idle": 105275500,
+        "speed": 3392,
+        "user": 4077700,
+        "nice": 47900,
+        "sys": 1292600,
+        "idle": 57183200,
         "irq": 0
       },
       {
         "model": "Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz",
-        "speed": 3359,
-        "user": 12784000,
-        "nice": 6233900,
-        "sys": 3962000,
-        "idle": 106833100,
+        "speed": 3392,
+        "user": 3915300,
+        "nice": 64100,
+        "sys": 1242800,
+        "idle": 57423400,
         "irq": 0
       }
     ],
@@ -96,8 +96,8 @@
         "name": "wlo1",
         "internal": false,
         "mac": "24:77:03:c7:2f:c8",
-        "address": "10.10.1.77",
-        "netmask": "255.255.254.0",
+        "address": "192.168.0.172",
+        "netmask": "255.255.255.0",
         "family": "IPv4"
       },
       {
@@ -113,7 +113,25 @@
         "name": "wlo1",
         "internal": false,
         "mac": "24:77:03:c7:2f:c8",
-        "address": "fe80::f08:c42:ec6f:6cfa",
+        "address": "2a02:1810:1d18:4f00:a52f:dcb0:5469:d1bf",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlo1",
+        "internal": false,
+        "mac": "24:77:03:c7:2f:c8",
+        "address": "2a02:1810:1d18:4f00:d401:e8c2:c395:d73f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlo1",
+        "internal": false,
+        "mac": "24:77:03:c7:2f:c8",
+        "address": "fe80::c99d:1b9a:874f:86a2",
         "netmask": "ffff:ffff:ffff:ffff::",
         "family": "IPv6",
         "scopeid": 3
@@ -130,58 +148,58 @@
   "nativeStack": [
     {
       "pc": "0x0000000000b22b05",
-      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [node]"
     },
     {
       "pc": "0x00000000009f371c",
-      "symbol": "node::OnFatalError(char const*, char const*) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "node::OnFatalError(char const*, char const*) [node]"
     },
     {
       "pc": "0x0000000000b5865e",
-      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]"
     },
     {
       "pc": "0x0000000000b589d9",
-      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]"
     },
     {
       "pc": "0x0000000000d064e5",
-      "symbol": " [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": " [node]"
     },
     {
       "pc": "0x0000000000d06b76",
-      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [node]"
     },
     {
       "pc": "0x0000000000d15d8f",
-      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [node]"
     },
     {
       "pc": "0x0000000000d16c15",
-      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]"
     },
     {
       "pc": "0x0000000000d196ac",
-      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]"
     },
     {
       "pc": "0x0000000000ce01a4",
-      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]"
     },
     {
-      "pc": "0x000000000102d4ee",
-      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "pc": "0x000000000102d64c",
+      "symbol": "v8::internal::Runtime_AllocateInOldGeneration(int, unsigned long*, v8::internal::Isolate*) [node]"
     },
     {
       "pc": "0x00000000013ad8f9",
-      "symbol": " [/home/hyfbe27/.nvm/versions/node/v13.3.0/bin/node]"
+      "symbol": " [node]"
     }
   ],
   "javascriptHeap": {
-    "totalMemory": 2153193472,
-    "totalCommittedMemory": 2151631936,
-    "usedMemory": 2147082816,
-    "availableMemory": 46876912,
+    "totalMemory": 2152148992,
+    "totalCommittedMemory": 2149464408,
+    "usedMemory": 2143591152,
+    "availableMemory": 47798392,
     "memoryLimit": 2197815296,
     "heapSpaces": {
       "read_only_space": {
@@ -193,37 +211,37 @@
       },
       "new_space": {
         "memorySize": 2097152,
-        "committedMemory": 1403632,
+        "committedMemory": 2344,
         "capacity": 1047424,
-        "used": 419264,
-        "available": 628160
+        "used": 0,
+        "available": 1047424
       },
       "old_space": {
-        "memorySize": 2130579456,
-        "committedMemory": 2130239344,
-        "capacity": 2128071264,
-        "used": 2127491760,
-        "available": 579504
+        "memorySize": 2062422016,
+        "committedMemory": 2062240992,
+        "capacity": 2057966168,
+        "used": 2057928928,
+        "available": 37240
       },
       "code_space": {
         "memorySize": 692224,
-        "committedMemory": 563072,
-        "capacity": 483680,
-        "used": 483680,
+        "committedMemory": 647264,
+        "capacity": 596256,
+        "used": 596256,
         "available": 0
       },
       "map_space": {
-        "memorySize": 2101248,
-        "committedMemory": 1931312,
-        "capacity": 1260560,
-        "used": 1260560,
+        "memorySize": 3411968,
+        "committedMemory": 3276992,
+        "capacity": 1833520,
+        "used": 1833520,
         "available": 0
       },
       "large_object_space": {
-        "memorySize": 17412096,
-        "committedMemory": 17412096,
-        "capacity": 17391728,
-        "used": 17391728,
+        "memorySize": 83214336,
+        "committedMemory": 83214336,
+        "capacity": 83196624,
+        "used": 83196624,
         "available": 0
       },
       "code_large_object_space": {
@@ -243,26 +261,26 @@
     }
   },
   "resourceUsage": {
-    "userCpuSeconds": 97.2052,
-    "kernelCpuSeconds": 1.66364,
-    "cpuConsumptionPercent": 205.977,
-    "maxRss": 2249007104,
+    "userCpuSeconds": 101.161,
+    "kernelCpuSeconds": 1.59137,
+    "cpuConsumptionPercent": 114.169,
+    "maxRss": 2408525824,
     "pageFaults": {
-      "IORequired": 0,
-      "IONotRequired": 637560
+      "IORequired": 22,
+      "IONotRequired": 709848
     },
     "fsActivity": {
-      "reads": 0,
-      "writes": 0
+      "reads": 2752,
+      "writes": 176
     }
   },
   "uvthreadResourceUsage": {
-    "userCpuSeconds": 42.4538,
-    "kernelCpuSeconds": 0.679837,
-    "cpuConsumptionPercent": 89.8618,
+    "userCpuSeconds": 48.4301,
+    "kernelCpuSeconds": 1.27248,
+    "cpuConsumptionPercent": 55.2251,
     "fsActivity": {
-      "reads": 0,
-      "writes": 0
+      "reads": 2752,
+      "writes": 176
     }
   },
   "libuv": [
@@ -282,7 +300,7 @@
     "XDG_SEAT": "seat0",
     "npm_config_bin_links": "true",
     "npm_config_key": "",
-    "SSH_AGENT_PID": "1651",
+    "SSH_AGENT_PID": "2212",
     "XDG_SESSION_TYPE": "x11",
     "npm_config_allow_same_version": "",
     "npm_config_description": "true",
@@ -302,7 +320,7 @@
     "npm_package_browserslist_production_0": ">0.2%",
     "npm_config_force": "",
     "DESKTOP_SESSION": "ubuntu",
-    "TERM_PROGRAM_VERSION": "1.40.0",
+    "TERM_PROGRAM_VERSION": "1.41.1",
     "NVM_BIN": "/home/hyfbe27/.nvm/versions/node/v13.3.0/bin",
     "npm_package_browserslist_production_1": "not dead",
     "npm_config_only": "",
@@ -327,7 +345,7 @@
     "npm_config_preid": "",
     "npm_config_tmp": "/tmp",
     "COLORTERM": "truecolor",
-    "GIO_LAUNCHED_DESKTOP_FILE_PID": "4004",
+    "GIO_LAUNCHED_DESKTOP_FILE_PID": "7495",
     "npm_package_dependencies_react_scripts": "3.3.0",
     "npm_package_description": "The exercises are guided by [tests](./src/__tests__). Each exercise has an associated test that will explain what is expected. Some tests you require you to fix an assertion others require you to fix something in the associated `.js` file.",
     "npm_config_depth": "Infinity",
@@ -386,7 +404,7 @@
     "npm_config_viewer": "man",
     "npm_config_node_gyp": "/home/hyfbe27/.nvm/versions/node/v13.3.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
     "PATH": "/home/hyfbe27/.nvm/versions/node/v13.3.0/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/hyfbe27/Desktop/Documents/React/week-1-project/node_modules/.bin:/home/hyfbe27/.nvm/versions/node/v13.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
-    "SESSION_MANAGER": "local/HYFBE27:@/tmp/.ICE-unix/1555,unix/HYFBE27:/tmp/.ICE-unix/1555",
+    "SESSION_MANAGER": "local/HYFBE27:@/tmp/.ICE-unix/2114,unix/HYFBE27:/tmp/.ICE-unix/2114",
     "npm_package_name": "react-w2",
     "npm_package_browserslist_development_1": "last 1 firefox version",
     "npm_config_audit_level": "low",
@@ -496,8 +514,7 @@
     "NODE_ENV": "test",
     "PUBLIC_URL": "",
     "NODE_PATH": "",
-    "JEST_WORKER_ID": "1",
-    "FORCE_COLOR": "1"
+    "JEST_WORKER_ID": "1"
   },
   "userLimits": {
     "core_file_size_blocks": {
