@@ -4,7 +4,7 @@ function App(props) {
     return (
         <section id="app">
             <h1 data-testid="title">{props.title}</h1>
-            {props.addDescription === true ? <p data-testid="description">This is a description of my app</p> : null}
+            {props.addDescription === true ?  <p data-testid="description">This is a description of my app</p> : null}
             {props.articles ? props.articles.map(article => <NewsArticle />) : null}
             {props.articles ? (
                 <p data-testid="reading-length">
