@@ -35,7 +35,7 @@ test('The component MyApp renders "My First React App" as text', () => {
     expect(element).toBeDefined();
 });
 
-test("NewsArticle", () => {
+test('The App component renders a component called NewsArticle', () => {
     // You can nest components in components
     // https://reactjs.org/docs/components-and-props.html#composing-components
 

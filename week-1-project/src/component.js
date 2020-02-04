@@ -17,6 +17,7 @@ function App() {
 }
 
 function NewsArticle() {
+    
     return (
         <article>
             <h1>Article</h1>
@@ -26,9 +27,16 @@ function NewsArticle() {
 }
 
 function MyApp() {
-    return <p>My First React App</p>;
+    const articles = [];
+    for(let i=0; i,200; i++){
+        articles.push(<NewsArticle />);
+    }
 
-   
+    return (
+    <div> <p>My First React App    </p>
+  {articles}
+</div>
+    );
 }
 
 
