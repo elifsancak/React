@@ -11,7 +11,7 @@ const Ex1 = function () {
     return (
         <div>
             <p>{text}</p>
-            <button onClick={() => { setText() /* Fix something here */ }}>
+            <button onClick={() => { setText('Hello World') /* Fix something here */ }}>
                 Translation please
             </button>
         </div>
@@ -30,8 +30,15 @@ const Ex2 = function () {
         <div>
             <p>{text[idx]}</p>
             <button onClick={() => {
+              if (idx===0) {
+                  setIdx(1);
+
                 /* Write some logic here */
-            }}>
+            }
+        else {
+            setIdx(0);
+        }
+        }}>
                 Translation please
             </button>
         </div>
@@ -45,14 +52,22 @@ const Ex2 = function () {
 // it always changes the text to the other language (the text toggles)
 
 const Ex3 = function () {
-    const text = ['Hello 世界', 'Hello World', 'Dag Wereld', 'Bonjour le monde', 'Hallo Welt'];
+    const text = ['Hello 世界', 'Hello World', 'Hallo Wereld', 'Bonjour le monde', 'Hallo Welt'];
     const [idx, setIdx] = useState(0);
     return (
         <div>
             <p>{text[idx]}</p>
             <button onClick={() => {
                 /* Write some logic here */
-            }}>
+        
+                  /* Write some logic here */
+                  if (idx<4){
+                    setIdx(1+idx);
+                  }
+                  else {
+                      setIdx(0);
+                  }
+              }}>
                 Translation please
             </button>
         </div>
@@ -70,13 +85,25 @@ const Ex4 = function () {
     const lang = ['english', 'japanese'];
     const text = ['Hello 世界', 'Hello World'];
     const [idx, setIdx] = useState(0);
+    const n = idx;
     return (
         <div>
             <p>{text[idx]}</p>
             <button onClick={() => {
+
+                
+                if (idx===0){
+                    setIdx(1);
+                    
+                }
+                else {
+                    setIdx(0);
+                  
+                }
                 /* Write some logic here */
             }}>
-                Translation to {/* Insert a variable here */} please
+                Translation to {lang[idx]} please
+                
             </button>
         </div>
     )
@@ -93,7 +120,7 @@ const Ex5 = function () {
     return (
         <div>
             <p>{count}</p>
-            <button /* Add something here */>
+            <button setCount={count+1}/* Add something here */>
                 Click me!
             </button>
         </div>
