@@ -14,8 +14,22 @@
 
 ## Weekly Projects
 
+Each week there will be 2 projects: 
+
+### Pass the tests in this repo:
+
 The structure of a weekly projects is that of a [create-react-app](https://create-react-app.dev/). This is boilerplate, a set of tools and a predefined structure to start writing React fast.
 The first project ([week-1-project](./week-1-project)) will teach you all about how it works.
+
+### Follow a tutorial and submit a new repo:
+
+__Week 1 Tutorial__: [a weather app]( https://www.youtube.com/watch?v=204C9yNeOYI)
+
+
+## Week 4 and 5
+
+We will make a tiny group project encorporating all the things we learned in the previous weeks.
+More info soon...
 
 ## Getting Started
 
@@ -36,15 +50,15 @@ Similar to [npm](https://www.npmjs.com/). As this package manager is recommended
 
 [Yarn](https://yarnpkg.com/lang/en/) will install the dependencies defined in [package.json](./package.json).
 
-## Getting started
+## Let's start
 
 - Navigate to the a week directory (e.g. `week-1-project`) in your document explorer.
 - Open the README.md file.
 
 ## Status
 
-![Week 1 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%201%20Project/badge.svg)
+![Week 1 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-1-project/badge.svg)
 
-![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%202%20Project/badge.svg)
+![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-2-project/badge.svg)
 
-![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%203%20Project/badge.svg)
+![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-3-project/badge.svg) 

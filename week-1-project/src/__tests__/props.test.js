@@ -26,7 +26,7 @@ test('The component App uses and renders with other props', async () => {
 });
 
 
-test('Given and additional props renders with description', async () => {
+test('Given a new prop the app renders with a description', async () => {
     const { getByTestId } = render(<App title="My App" />);
 
     const element = await getByTestId('description');
@@ -46,7 +46,7 @@ test('Render with a state object using the spread operator ', async () => {
     expect(element.innerHTML).toEqual('My App');
 });
 
-test('Renders articles ', async () => {
+test('Renders 3 articles when given 3 articles', async () => {
     const data = {
         title: 'My App',
         articles: [
@@ -167,5 +167,19 @@ test('Passing functions as props: part 2', async () => {
 
     const element = await getByTestId('reading-length');
 
+    // Can you figure out how this code is supposed to work ?
+    // The function from the props is being called in a somewhat complicated way.
+    // Figure out what is happening and what an appropriate fix would be.
+    // You will only need to modify calculateReadingLength above\
+
     expect(element.innerHTML).toEqual('Reading all article will take you 2 minutes');
+});
+
+test('BONUS, I have solved the warning about the unique key', async () => {
+
+    // When you run the test you might have noticed this warning "Warning: Each child in a list should have a unique "key" prop."
+    // Can you solve the problem ?
+
+    const iSolvedTheProblem = false;
+    expect(iSolvedTheProblem).toBeTruthy();
 });

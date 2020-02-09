@@ -16,7 +16,7 @@ Includes but not limited to:
 - [ESLint](https://eslint.org/)
 - ... 
 
-Take a look at the test in [create-react-app.js](./src/__tests__/create-react-app.test.js) to get started with the exercise.
+Take a look at the test in [create-react-app.test.js](./src/__tests__/create-react-app.test.js) to get started with the exercise.
 
 ## JSX
 
@@ -44,7 +44,7 @@ https://reactjs.org/docs/components-and-props.html
 
 Take a look at the tests in [props.test.js](./src/__tests__/props.test.js) to get started with the exercise.
 
-### Rendering Your App
+## Rendering Your App
 
 No fun without seeing anything right ?!
 Open the development server for your app with
@@ -62,3 +62,16 @@ The tests assert if everything in [index.js](./src/index.js) is ok.
 **Test is not located inside of the __tests__ directory here**
 
 *in reality it slightly more complicate learn more on https://create-react-app.dev/
+
+### Shipping Your App (Some more create-react-app)
+
+Once you have completed all the exercises run
+
+```
+yarn build
+```
+
+This will create a `build` folder in the directory.
+Commit the generated files and push them to your repository to complete the exercise.
+
+*Typically building an app is done by development server and the build directory is not part of your project*

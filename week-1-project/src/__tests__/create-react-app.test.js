@@ -8,7 +8,7 @@ import    * as AllObjects  from '../create-react-app';
 
 // Fix the following tests
 // Fix the assertions in the test below.
-// No need to change anything in tests that pass these are purely informative and are meant to teach you something.
+// No need to change anything in tests that pass, these are purely informative and are meant to teach you something.
 
 test('Getting started', () => {
   // Get this test to run by installing dependencies with yarn
@@ -58,6 +58,10 @@ test('Babel', () => {
 
   // The config in create-react-app allows you for instance to already use optional chaining
   const result = optionalChaining({});
+
+  // The implementation op the function above use optional chaining
+  // Currently this is still a proposal https://github.com/tc39/proposal-optional-chaining
+  // Babel makes sure we can already use it by transpiling the code
 
   // This test is purely informative
   expect(result).toEqual(undefined);
