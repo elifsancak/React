@@ -85,7 +85,7 @@ const Ex4 = function () {
     const lang = ['english', 'japanese'];
     const text = ['Hello 世界', 'Hello World'];
     const [idx, setIdx] = useState(0);
-    const n = idx;
+   
     return (
         <div>
             <p>{text[idx]}</p>
@@ -120,9 +120,10 @@ const Ex5 = function () {
     return (
         <div>
             <p>{count}</p>
-            <button setCount={count+1}/* Add something here */>
+            <button onClick={()=>{setCount(count+1);
+            }}>
                 Click me!
-            </button>
+        </button> 
         </div>
     )
 };
@@ -135,11 +136,13 @@ const Ex5 = function () {
 // No? too bad...
 
 const Ex6 = function () {
-    const [fib, setFib] = useState( /* Set the initial value of the state here */);
+    const [fib, setFib] = useState([0,1]);
     return (
         <div>
-            <p>{/* The value you should put here is: `fib[0]`, but this will only work after you set the initial state */}</p>
-            <button onClick={() => { /* Write a function to update the state */ }}>
+            <p>{fib[0]}</p>
+            <button onClick={() => {fib[2]=fib[0]+fib[1];
+            setFib([fib[1],fib[2]])
+            }}>
                 Click me!
             </button>
         </div>
@@ -152,13 +155,14 @@ const Ex6 = function () {
 // initial value should be 0
 
 const Ex7 = function () {
-    /* Init the state here */
+    const [count,setCount] = useState(0);
     return (
         <div>
-            <p>{/* Set a value here */}</p>
-            <button /* Add something here */>
-                click me
-            </button>
+            <p>{count}</p>
+            <button onClick={()=>{setCount(count+1);
+            }}>
+                Click me!
+        </button> 
         </div>
     )
 };
@@ -173,17 +177,20 @@ const Ex7 = function () {
 // Set the p tag text to: "I like ..." where ... is the text value of the button
 
 const Ex8 = function () {
-    /* init state and function to update it here */
+    const [count,setCount] = useState(0);
     return (
         <div>
-            <p>I like {/* Add something here */}</p>
-            <button /* Add something here */>
+            <p>I like {count}</p>
+            <button onClick={()=>{setCount("fruit");
+        }}>
                 fruit
             </button>
-            <button /* Add something here */>
+            <button onClick={()=>{setCount("meat");
+        }}>
                 meat
             </button>
-            <button /* Add something here */>
+            <button onClick={()=>{setCount("vegetables");
+        }}>
                 vegetables
             </button>
         </div>
@@ -202,14 +209,16 @@ const Ex8 = function () {
 // Append it to the initial 'Last click'
 
 const Ex9 = function () {
-    /* init state and function to update it here */
+    const [click,setClick] = useState(0);
     return (
         <div>
-            <p>Last click: {/* Add something here */}</p>
-            <button /* Add something here */>
+            <p>Last click: {click}</p>
+            <button onClick={()=>{setClick("UPPER");
+        }}>
                 UPPER
             </button>
-            <button /* Add something here */>
+            <button onClick={()=>{setClick("LOWER");
+        }}>
                 LOWER
             </button>
         </div>
@@ -231,10 +240,10 @@ const Ex10 = function () {
         <div>
             <ul>
                 {
-                    /* render the items as an li here */
+                   /* render the items as an li here */
                 }
             </ul>
-            <button onClick={() => { /* Set the items here */  }}>
+            <button >
                 Add element
             </button>
         </div>
