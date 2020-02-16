@@ -13,9 +13,15 @@ const InterActiveFruits = () => {
 
     const [grid, setGrid] = useState([]);
 
+    const [bounce, setBounce] = useState([]);
+
+    const [rotate, setRotate] = useState([]);
+
     // On click generate a grid of fruits
     const handleGenerateClick = () => {
         const grid = [];
+
+  
 
         // Generate a matrix of rows x columns
         for (let row = 0; row < rows; row++) {
@@ -30,6 +36,29 @@ const InterActiveFruits = () => {
         // Update the state
         setGrid(grid);
     };
+    
+const handleBounce = () => {
+    if (bounce===false) {
+        setBounce(true);
+
+    }
+    else {
+        setBounce(false);
+    }
+}
+
+const handleRotate = () => {
+    if (rotate===false) {
+        setRotate(true);
+
+    }
+    else {
+        setRotate(false);
+    }
+}
+ 
+
+    
 
     return (
         <section>
@@ -43,7 +72,7 @@ const InterActiveFruits = () => {
                                     row.map((fruit, columnIndex) => {return (
                                         <td key={`${rowIndex}_${columnIndex}_${fruit}`}>
                                             {/* TODO: Add state variables for bounce and rotate, assign them here */}
-                                            <InterActiveFruit key={`${rowIndex}_${columnIndex}_${fruit}`} name={fruit} bounce={false} rotate={false} />
+                                            <InterActiveFruit key={`${rowIndex}_${columnIndex}_${fruit}`} name={fruit} bounce={bounce} rotate={rotate} />
                                         </td>
                                     )})
                                 }
@@ -55,11 +84,12 @@ const InterActiveFruits = () => {
             </table>
             <button onClick={handleGenerateClick}>Generate</button>
             {/* TODO: Add a click handler for bounce and rotate */}
-            <button>Bounce</button>
-            <button>Rotate</button>
+            <button onClick={handleBounce}>Bounce</button>
+            <button onClick={handleRotate}>Rotate</button>
         </section>
     )
 };
+    
 
 const InterActiveFruit = ({ name, bounce, rotate }) => {
     const [position, setPosition] = useState([]);

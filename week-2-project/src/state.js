@@ -235,21 +235,24 @@ const Ex9 = function () {
 // On button click, a new list item should be appended in the unordered list. It should have as value "containerd"
 
 const Ex10 = function () {
-    const [items, setItems] = useState(['docker', 'kubernetes']);
+    const [items, setItems] = useState(['docker','kubernetes']);
     return (
         <div>
             <ul>
                 {
-                   /* render the items as an li here */
+                    /* render the items as an li here */
+                    items.map( (a) => (<li>{a}</li>))
                 }
             </ul>
-            <button >
+            <button onClick={() => { /* Set the items here */
+                const newItems = [...items];
+                newItems.push('containerd');
+                setItems(newItems)
+            }}>
                 Add element
             </button>
         </div>
-    )
-};
-
+    )}
 // Exercise 11
 // Setup (start from the Base component)
 // replace the p tag with an unordered list tag.
