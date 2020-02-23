@@ -54,3 +54,4 @@
 /week-1-project/yarn-error.log*
 /week-2-project/yarn-error.log*
 /week-3-project/yarn-error.log*
+node_modules
