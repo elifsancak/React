@@ -234,25 +234,30 @@ const Ex9 = function () {
 // Goal
 // On button click, a new list item should be appended in the unordered list. It should have as value "containerd"
 
-const Ex10 = function () {
-    const [items, setItems] = useState(['docker','kubernetes']);
+const Ex10 = function() {
+    const [items, setItems] = useState(["docker", "kubernetes"]);
     return (
-        <div>
-            <ul>
-                {
-                    /* render the items as an li here */
-                    items.map( (a) => (<li>{a}</li>))
-                }
-            </ul>
-            <button onClick={() => { /* Set the items here */
-                const newItems = [...items];
-                newItems.push('containerd');
-                setItems(newItems)
-            }}>
-                Add element
-            </button>
-        </div>
-    )}
+      <div>
+        <ul>
+          {/* render the items as an li here */
+          items.map(a => (
+            <li>{a}</li>
+          ))}
+        </ul>
+        <button
+          onClick={() => {
+            /* Set the items here */
+  
+            const newItems = [...items];
+            newItems.push("containerd");
+            setItems(newItems);
+          }}
+        >
+          Add element
+        </button>
+      </div>
+    );
+  };
 // Exercise 11
 // Setup (start from the Base component)
 // replace the p tag with an unordered list tag.
@@ -272,16 +277,21 @@ const Ex10 = function () {
 const Ex11 = function () {
     const default_list = ['ipsizzle', 'nullizzle', 'sapizzle', 'velizzle', 'crackalackin', 'maurizzle', 'rhoncizzle'];
     const [items, setItems] = useState([]);
-    const [idx, setIdx] = useState(1);
+    const [idx, setIdx] = useState(0);
+    const renderedItems = items.map((item, index) => <li key={index}>{item}</li>)
+    
+        
     return (
         <div>
             <ul>
-                {
-                    /* render the items as an li here */
-                }
+                {renderedItems}                
             </ul>
             <button onClick={() => {
-                /* update the state here */
+                if (idx<default_list.length){
+                    items.push(default_list[idx])
+                    setItems(items)
+                    setIdx(idx+1)
+                }
             }}>
                 Add element
             </button>
@@ -325,30 +335,47 @@ const Ex12 = function ({base_list}) {
 // Use the same list as in exercice 11
 
 
-const Ex13 = function () {
-    const default_list = ['ipsizzle', 'nullizzle', 'sapizzle', 'velizzle', 'crackalackin', 'maurizzle', 'rhoncizzle'];
+const Ex13 = function() {
+    const default_list = [
+      "ipsizzle",
+      "nullizzle",
+      "sapizzle",
+      "velizzle",
+      "crackalackin",
+      "maurizzle",
+      "rhoncizzle"
+    ];
     const [items, setItems] = useState([]);
-    const [idx, setIdx] = useState(1);
+    const [idx, setIdx] = useState(0);
     return (
-        <div>
-            <ul>
-                {
-                    /* render the items as an li here */
-                }
-            </ul>
-            <button onClick={() => {
-                /* update the state here */
-            }}>
-                Add element
-            </button>
-            <button onClick={() => {
-                /* update the state here */
-            }}>
-                Remove element
-            </button>
-        </div>
-    )
-};
+      <div>
+        <ul>
+          {items.map( (item,index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <button
+          onClick={() => {
+            setIdx(idx+1);
+            let manual = default_list.slice(0, idx+1);
+            setItems(manual);
+          }}
+        >
+          Add element
+        </button>
+        <button
+          onClick={() => {
+            setIdx(idx-1);
+            let manual = default_list.slice(0, idx-1);
+            setItems(manual);
+            /* update the state here */
+          }}
+        >
+          Remove element
+        </button>
+      </div>
+    );
+  };
 
 // Exercise 14
 // Setup
@@ -379,6 +406,8 @@ const Ex14 = function ({base_list}) {
         </div>
     )
 };
+
+
 
 
 export {Ex1, Ex2, Ex3, Ex4, Ex5, Ex6, Ex7, Ex8, Ex9, Ex10, Ex11, Ex12, Ex13, Ex14};
